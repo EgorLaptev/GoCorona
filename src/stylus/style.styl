@@ -1,0 +1,333 @@
+@require 'reset.styl'
+@require 'fonts.styl'
+@require 'variables.styl'
+
+body
+    font-family Rubik, Raleway, sans-serif
+    overflow-x hidden
+
+.blue-text
+    color: #4285f4
+
+.red-text
+    color: #EC5863
+
+.container
+    position: relative;
+    width 100%
+    max-width 1087px
+    margin: 0 auto
+    padding: 0 15px
+
+    .content
+        width 500px
+
+        &__title
+            margin-bottom 12px
+
+            font-family: Rubik;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 126%;
+
+            font-feature-settings: 'pnum' on, 'lnum' on;
+
+            color: #000000;
+
+        &__subtitle
+            margin-bottom: 24px
+
+            font-family: Rubik;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 138.5%;
+            /* or 17px */
+
+            letter-spacing: 0.08em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+
+            color: #616161;
+
+        &__button
+            width: 144px;
+            height: 40px;
+            background: #EC5863;
+            border: none
+            border-radius: 5px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 12px;
+            text-transform uppercase
+            cursor pointer
+            letter-spacing: 0.14em;
+            color: #FCFDFE;
+            transition .2s ease background
+            &:hover
+                background: #fb7680
+
+/* header */
+.page-header
+    position: absolute;
+    top: 37px
+    left: 50%
+
+    display flex
+    justify-content flex-end
+    align-items center
+
+    transform translateX(-50%)
+    z-index 50
+
+
+    .logo
+        margin-right auto
+        z-index: 100
+        &__img
+            height 40px
+            object-fit cover
+            object-position 0 0
+
+    .menu
+        &__button
+            cursor pointer
+            background: transparent
+            border: none
+            display none
+            margin-left: 25px
+            z-index: 100
+            transition .2s ease color
+
+        &__list
+            display flex
+            flex-direction row
+            justify-content center
+            align-items center
+            gap 40px
+
+            text-transform uppercase
+            font-size 10px
+            font-weight bold
+            font-family Raleway
+            line-height: 1.2
+            letter-spacing .14em
+            color #000000
+
+        &__link
+            white-space nowrap
+            transition .1s ease color
+            &:hover
+                color: #EC5863
+
+
+
+    &__download
+        height 40px
+        width 130px
+
+        margin-left: 122px
+
+        border none
+        border-radius: 5px
+        background #4285f4
+        cursor: pointer;
+
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 10px;
+        line-height: 12px;
+        /* identical to box height */
+
+        letter-spacing: 0.14em;
+
+        color: #FCFDFE;
+
+        transition .2s ease background
+
+        &:hover
+            background: #5995f8
+
+.intro
+    background: #FAFBFD url(../img/intro.webp) no-repeat 100% 0%
+    background-size contain
+    &__container
+        min-height: 100vh
+        display flex
+        flex-direction row
+        justify-content flex-start
+        align-items center
+        padding: 0 20px
+
+    &__image
+        width: 547px
+        object-fit contain
+
+    .watch
+        position: absolute;
+        bottom: 5%
+        left: 20px
+
+        display grid
+        grid-template-columns 44px 1fr
+        gap 12px
+
+        &__image
+            height: 44px
+            width: 44px
+            object-fit contain
+
+        &__content
+            display flex
+            flex-direction column
+            justify-content center
+            align-items flex-start
+            gap 5px
+
+        &__title
+            font-family: Rubik;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            letter-spacing: 0.08em;
+            text-align: left;
+
+        &__link
+            text-transform uppercase
+            font-family: Rubik;
+            font-size: 9px;
+            font-weight: 400;
+            line-height: 11px;
+            letter-spacing: 0.165em;
+            text-align: left;
+
+.stay-safe
+    min-height: 100vh
+    padding: 79px 48px
+    background: #fff
+    &__container
+        display flex
+        flex-direction row
+        justify-content space-between
+        align-items: center
+        gap 50px
+    &__image
+        width: 338px
+
+.talk-experts
+    min-height: 100vh
+    padding: 110px 28px
+    background: #FAFBFD
+    &__container
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        gap 79px
+    &__wrapper
+        display flex
+        flex-direction row
+        justify-content space-between
+        align-items center
+        gap 75px
+    &__video
+        width: 521px
+        height: 284px
+        border-radius 8px
+    .stat
+        width: 760px
+        height: 200px
+        position: relative;
+        display flex
+        flex-direction row
+        justify-content center
+        align-items center
+        gap: 80px
+        padding: 90px 80px 81px 45px
+        background: white
+        border-radius 16px
+        text-align center
+        background: white url(../img/decor.webp) 50% 50% no-repeat
+        background-size: contain;
+        &__title
+            font-family: Rubik;
+            font-size: 11px;
+            font-weight: 700;
+            line-height: 13px;
+            letter-spacing: 0.37em;
+            text-align: center;
+        &__data
+            color: #EC5863
+            font-family: Rubik;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 43px;
+            letter-spacing: 0.14em;
+            text-align: center;
+
+.features
+    min-height: 100vh;
+    padding 80px 35px 176px 35px
+    background: white url(../img/features_bg.webp) 50% 55% no-repeat
+    background-size: 80%;
+    &__container
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        gap 64px
+    &__title
+        font-family: Rubik;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 55px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin-bottom: 14px
+    &__subtitle
+        font-family: Rubik;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.08em;
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto
+    &__list
+        display grid
+        grid-template-columns repeat(3, 278.17px)
+        grid-template-rows 276.52px
+        gap 72px
+        .feature
+            background: white
+            border-radius 8px
+            padding: 37px 25px
+            text-align center
+            box-shadow: 0px 4px 18px 0px #587EEC2E;
+            &__image
+                display inline-block
+                height: 72px
+                object-fit contain
+
+.footer-page
+    position: absolute;
+    width: 100%
+    padding-bottom: 40px;
+    &__container
+        display flex
+        justify-content: center;
+        align-items center
+
+
+.apps
+    display flex
+    flex-direction row
+    justify-content center
+    align-items center
+    gap: 57px
+    &__image
+        width: 160px
+        object-fit cover
+
+@require 'media.styl'

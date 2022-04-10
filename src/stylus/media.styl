@@ -1,0 +1,42 @@
+@media screen and (max-width: 950px)
+    .intro
+        background-image: url(../img/intro2.webp)
+    .page-header__download
+        margin-left: 60px
+
+@media screen and (max-width: 780px)
+    .page-header
+        .menu
+            position: absolute;
+            inset 0
+
+            display flex
+            justify-content center
+            align-items center
+
+            height: 100vh
+            width: 100vw
+
+            background: #FFF
+
+            transform translateY(-200%)
+            transition transform ease .3s
+
+            &_opened
+                transform translateY(-37px)
+
+            &__button
+                display block
+                order 10
+
+            &__list
+                flex-direction column
+                font-size 12px
+
+        &__download
+            margin-left: 0
+
+@media screen and (max-width: 400px)
+    .page-header
+        .logo
+            width: 40px
